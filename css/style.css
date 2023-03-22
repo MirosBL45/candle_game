@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  --blueColor: #00d1d2;
+  --blueColor2: #5CD6D8;
+  --whiteColor: #fff;
+  --blackColor: #34303d;
+  --bodyBackground: url("../images/whole_cake.png");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--blueColor2);
+  width: 100vw;
+  height: 100vh;
+}
+
+.masterContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.candle {
+  display: grid;
+  place-items: center;
+}
+
+.cake {
+  width: 100vw;
+  filter: blur(3px);
+}
+
+.candle,
+.howPlay,
+.text,
+.flames,
+.popUp,
+.end {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+.text {
+  z-index: 1;
+  width: 80%;
+  background: var(--whiteColor);
+  color: var(--blackColor);
+  padding: 40px 30px;
+}
+.text p {
+  font-size: 25px;
+}
+.text span {
+  color: var(--blueColor);
+  font-weight: 500;
+}
+.text .play {
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  color: var(--whiteColor);
+  background: var(--blueColor);
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 38px;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 23px;
+}
+
+.howPlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--whiteColor);
+  display: none;
+}
+.howPlay img {
+  position: absolute;
+  top: 220px;
+  left: 58px;
+  width: 10%;
+  animation: up-and-down 1s ease-in-out infinite;
+}
+.howPlay h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.howPlay p {
+  font-weight: 300;
+  width: 50%;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+@keyframes up-and-down {
+  0% {
+    top: 220px;
+  }
+  50% {
+    top: 230px;
+  }
+  100% {
+    top: 220px;
+  }
+}
+.flames {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: none;
+}
+.flames .flame {
+  position: absolute;
+  cursor: pointer;
+}
+.flames .f1 {
+  top: 184px;
+  left: 58px;
+}
+.flames .f2 {
+  top: 156px;
+  left: 118px;
+}
+.flames .f3 {
+  top: 137px;
+  left: 175px;
+}
+.flames .f4 {
+  top: 157px;
+  right: 119px;
+}
+.flames .f5 {
+  top: 194px;
+  right: 74px;
+}
+
+.popUp {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.popUp img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 99vh;
+}
+
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--whiteColor);
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+.end .key,
+.end .five,
+.end .thanks {
+  text-transform: uppercase;
+  font-size: 30px;
+  width: 60%;
+}
+.end .key {
+  font-weight: 300;
+}
+.end .thanks {
+  margin-top: 20px;
+  z-index: 1;
+}
+.end .thanks span {
+  text-transform: capitalize;
+  font-size: 60px;
+  font-weight: 200;
+}
+.end .five {
+  font-weight: 600;
+}
+.end .imgFive {
+  width: 25%;
+  margin-bottom: 30px;
+}
+.end .imgIqos {
+  z-index: 0;
+  position: absolute;
+  width: 10vw;
+  top: 290px;
+  left: 107px;
+}
+.end .thanks2 {
+  width: 60%;
+  font-weight: 600;
+}
+.end footer {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.end .endConf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 99vh;
+}
